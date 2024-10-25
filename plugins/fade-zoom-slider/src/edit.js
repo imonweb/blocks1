@@ -31,11 +31,11 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
+		<div { ...useBlockProps() }>
 			{ __(
 				'Fade Zoom Slider – hello from the editor!',
 				'fade-zoom-slider'
 			) }
-		</p>
+		</div>
 	);
 }

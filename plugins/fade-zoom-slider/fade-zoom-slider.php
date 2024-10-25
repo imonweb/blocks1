@@ -5,12 +5,12 @@
  * Requires at least: 6.6
  * Requires PHP:      7.2
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Imon Dela Rosa
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       fade-zoom-slider
  *
- * @package Wp
+ * @package Imon
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
