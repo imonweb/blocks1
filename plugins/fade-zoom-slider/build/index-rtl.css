@@ -12,3 +12,9 @@
 .wp-block-wp-fade-zoom-slider .slide {
   opacity: 1;
 }
+.wp-block-wp-fade-zoom-slider .remove-fade-slider-img.is-destructive {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background-color: rgba(244, 70, 70, 0.544);
+}

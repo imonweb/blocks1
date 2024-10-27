@@ -10,6 +10,7 @@
 .wp-block-wp-fade-zoom-slider {
   color: #fff;
   padding: 2px;
+  position: relative;
 }
 
 .slide {
