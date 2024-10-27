@@ -26,17 +26,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Edit() {
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    images
+  } = attributes;
   const ALLOWED_MEDIA_TYPES = ["image"];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+  console.log(images);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
-        onSelect: media => console.log('selected ' + media.length),
+        onSelect: media =>
+        // console.log( 'selected ' + media.length )
+        setAttributes({
+          images: media
+        }),
         allowedTypes: ALLOWED_MEDIA_TYPES,
         multiple: true,
         addToGallery: true,
         gallery: true,
+        value: images.map(img => img.id),
         render: ({
           open
         }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
@@ -45,7 +57,13 @@ function Edit() {
           children: "Open Media Library"
         })
       })
-    })
+    }), images.map((img, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "slide",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+        src: img.url,
+        alt: img.alt
+      })
+    }))]
   });
 }
 
@@ -226,7 +244,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"wp/fade-zoom-slider","version":"0.1.0","title":"Fade Zoom Slider","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"fade-zoom-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"wp/fade-zoom-slider","version":"0.1.0","title":"Fade Zoom Slider","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"align":true,"dimensions":{"aspectRatio":true,"minHeight":true}},"attributes":{"images":{"type":"array","default":[]}},"textdomain":"fade-zoom-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

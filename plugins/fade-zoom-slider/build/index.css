@@ -9,5 +9,8 @@
 .wp-block-wp-fade-zoom-slider {
   border: 1px dotted #f00;
 }
+.wp-block-wp-fade-zoom-slider .slide {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=index.css.map*/
